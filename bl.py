@@ -1,8 +1,6 @@
 def isprime(x):
     
-    if x == 0:
-        return False
-     
+    
     result = True
 
     for i in range (2, x):
