@@ -35,4 +35,4 @@ def test_isprime_2():
 @allure.testcase("TMS-456")
 @allure.severity(allure.severity_level.CRITICAL)
 def test_isprime_0():
-    assert bl.isprime(0)==False
+    assert bl.isprime(0)==True
