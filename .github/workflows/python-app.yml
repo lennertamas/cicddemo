@@ -2,8 +2,8 @@ name: Allure Report
 
 on:
   push:
-    branches-ignore:
-      - '!main'
+    branches:
+      - main
 
 jobs:
   autotests:
@@ -13,7 +13,7 @@ jobs:
       - uses: actions/checkout@v3
 
       - name: Set up Python 3.x
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v5
         with:
           python-version: '3.x'
 
@@ -36,7 +36,7 @@ jobs:
           path: gh-pages
 
       - name: Allure Report action from marketplace
-        uses: simple-elf/allure-report-action@v1.7
+        uses: simple-elf/allure-report-action@v1.10
         if: always()
         with:
           allure_results: allure-results
@@ -45,7 +45,7 @@ jobs:
       - name: Deploy report to Github Pages
         if: always()
         uses: peaceiris/actions-gh-pages@v2
-        env:
+        with:
           PERSONAL_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PUBLISH_BRANCH: gh-pages
           PUBLISH_DIR: allure-history
