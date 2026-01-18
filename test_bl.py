@@ -29,7 +29,7 @@ def test_isprime_2():
 @allure.title("Test 0 is not prime ")
 @allure.description("This test attempts to test wether 0 is prime or not.")
 @allure.tag("NewUI", "Essentials", "Authentication")
-@allure.label("owner", "John Doe")
+@allure.label("owner", "John")
 @allure.link("https://dev.example.com/", name="Website")
 @allure.issue("AUTH-123")
 @allure.testcase("TMS-456")
