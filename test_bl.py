@@ -11,7 +11,7 @@ import bl
 @allure.testcase("TMS-456")
 @allure.severity(allure.severity_level.CRITICAL)
 def test_isprime_1():
-    assert bl.isprime(7)==True
+    assert bl.isprime(7)==False
 
 
 @allure.title("Test 2 is not prime ")
@@ -23,7 +23,7 @@ def test_isprime_1():
 @allure.testcase("TMS-456")
 @allure.severity(allure.severity_level.CRITICAL)
 def test_isprime_2():
-    assert bl.isprime(100)==False
+    assert bl.isprime(100)==True
 
 
 @allure.title("Test 0 is not prime ")
